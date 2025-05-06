@@ -12,6 +12,7 @@ st.markdown("""
     /* Chat bubbles */
     .user-bubble {
         background-color: #ffdddd;
+            color: black;
         padding: 10px;
         border-radius: 15px 15px 0 15px;
         margin: 5px 0;
@@ -21,6 +22,7 @@ st.markdown("""
     
     .assistant-bubble {
         background-color: #ddffdd;
+            color: black;
         padding: 10px;
         border-radius: 15px 15px 15px 0;
         margin: 5px 0;
@@ -130,10 +132,6 @@ with col1:
 with col2:
     send_button = st.button("➤", use_container_width=True)
 
-# Function to handle button click or text input change
-def handle_input_change():
-    st.session_state.update_clicked = True
-
 # Call the function when user_input or button is pressed
 if send_button or (user_input and st.session_state.update_clicked):
     st.session_state.update_clicked = False
@@ -146,9 +144,8 @@ if send_button or (user_input and st.session_state.update_clicked):
             # Add user message
             st.session_state.conversation.append({"role": "user", "text": user_input})
             st.session_state.processing = True
-            # Reset the input field value (handled automatically by the widget)
-            st.session_state.user_input = ""  # Input cleared automatically after pressing send
-            st.rerun()  # Rerun to simulate clearing the input and updating chat
+            del st.session_state["user_input"]
+            st.rerun()  
 
 # Generate response after rerun
 if st.session_state.processing and st.session_state.conversation[-1]["role"] == "user":
