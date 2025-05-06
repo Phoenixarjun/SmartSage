@@ -1,5 +1,3 @@
-Sure! Here's a well-structured and detailed README file in markdown format for your GitHub repository:
-
 # 🧠 SmartSage - Conversational AI for Your Sources
 
 Welcome to **SmartSage**! This is a powerful, conversational AI web app that allows users to interact with uploaded documents or URLs and ask AI-powered questions. The app uses an intelligent processing pipeline to extract content from documents and provides meaningful responses.
