@@ -25,13 +25,13 @@ Before running the app, ensure you have the following installed:
 
 1. Clone the repository to your local machine:
 ````bash
-   git clone https://github.com/your-username/smartsage.git
+   git clone  https://github.com/Phoenixarjun/SmartSage
 ````
 
 2. Navigate into the project directory:
 
    ```bash
-   cd smartsage
+   cd SmartSage
    ```
 
 3. Install the required dependencies:
